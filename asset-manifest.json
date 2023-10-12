@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/moumovs.github.io/static/css/main.26b5594e.css",
-    "main.js": "/moumovs.github.io/static/js/main.b110acd7.js",
+    "main.css": "/moumovs.github.io/static/css/main.2ea21eaa.css",
+    "main.js": "/moumovs.github.io/static/js/main.c980de8b.js",
     "static/media/self.png": "/moumovs.github.io/static/media/self.0ada5bf2d4dbc25a950e.png",
     "static/media/mock1.png": "/moumovs.github.io/static/media/mock1.42264a67058792bb80d7.png",
     "index.html": "/moumovs.github.io/index.html",
-    "main.26b5594e.css.map": "/moumovs.github.io/static/css/main.26b5594e.css.map",
-    "main.b110acd7.js.map": "/moumovs.github.io/static/js/main.b110acd7.js.map"
+    "main.2ea21eaa.css.map": "/moumovs.github.io/static/css/main.2ea21eaa.css.map",
+    "main.c980de8b.js.map": "/moumovs.github.io/static/js/main.c980de8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.26b5594e.css",
-    "static/js/main.b110acd7.js"
+    "static/css/main.2ea21eaa.css",
+    "static/js/main.c980de8b.js"
   ]
 }
