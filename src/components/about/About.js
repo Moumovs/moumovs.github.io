@@ -10,11 +10,13 @@ export default function About() {
 
     function aboutMeText() {
         return (
-        <>
+        <Box className={Style.summary} display={'flex'} flexDirection={'column'}>
             {info.bio.map((text, index) => (
-                <p>{text}</p>
+                <p>
+                    {text}
+                </p>
             ))}
-        </>
+        </Box>
         );
     }
 
@@ -43,7 +45,7 @@ export default function About() {
     }
 
     return (
-        <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'}>
+        <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'1rem'}>
             <Section text={aboutMeText()} title={"Introduction"}/>
             <Section text={skillsText()} title={"Skills"}/>
             <Section text={miscText()} title={"Experiences"}/>
