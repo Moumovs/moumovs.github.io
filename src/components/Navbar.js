@@ -90,13 +90,16 @@ class Navbar extends React.Component {
           active: 'home',
           navbarBackgroundColor: (left_links[0].active !== 'home') ? (this.props.darkMode ? Style.navbarActiveDark : Style.navbarActive) : undefined
         }
-        const navbarBackgroundColor = (left_links[0].active !== this.state.active) ? (this.props.darkMode ? Style.navbarActiveDark : Style.navbarActive) : undefined;
     }
 
     setActive (active) {
         var linkActive = active === '/' ? 'home' : active;
         this.setState({active: linkActive, 
             navbarBackgroundColor: (left_links[0].active !== linkActive) ? (this.props.darkMode ? Style.navbarActiveDark : Style.navbarActive) : undefined})
+    }
+
+    handleLightChange () {
+        this.setState({navbarBackgroundColor: (left_links[0].active !== this.state.active) ? (!this.props.darkMode ? Style.navbarActiveDark : Style.navbarActive) : undefined})
     }
 
     handleStateChange (state) {
@@ -108,7 +111,7 @@ class Navbar extends React.Component {
     }
 
     toggleMenu () {
-        this.setState(state => ({menuOpen: !state.menuOpen}))
+        this.setState(state => ({menuOpen: !state.menuOpen, navbarBackgroundColor: (left_links[0].active !== this.state.active) ? (!this.props.darkMode ? Style.navbarActiveDark : Style.navbarActive) : undefined}))
     }
 
     render () {
@@ -136,7 +139,9 @@ class Navbar extends React.Component {
                             </Box>
                         ))}
                         <li>
-                            <Toggler darkMode={this.props.darkMode} handleClick={this.props.handleClick}/>
+                            <Box components={"ul"} display={'flex'} onClick={() => this.handleLightChange()}>
+                                <Toggler darkMode={this.props.darkMode} handleClick={this.props.handleClick}/>
+                            </Box>
                         </li>
                     </Box>}
                     {window.screen.width < 530 && <Menu styles={this.props.darkMode ? darkMenu : undefined} right width={'65%'} isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
@@ -147,7 +152,7 @@ class Navbar extends React.Component {
                             </Link>
                         ))}
                         <Box components={"ul"} display={'flex'} onClick={() => this.toggleMenu()}>
-                            <Toggler darkMode={this.props.darkMode} handleClick={this.props.handleClick}/>
+                            <Toggler darkMode={this.props.darkMode} handleClick={() => this.props.handleClick}/>
                         </Box>
                     </Menu>}
                 </Box>

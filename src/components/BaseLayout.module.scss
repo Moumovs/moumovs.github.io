@@ -9,7 +9,7 @@ footer {
   color: $white;
   transition: all 400ms;
 
-  a, i, li {
+  a, i, li, p {
     color: $white;
     transition: color 400ms;
   }
@@ -20,12 +20,28 @@ footer {
 
   footer {
     color: $white;
+  }  
+
+  section {
+      color: $white;
+      
   }
   
+  header {
+    background-color:$darkerDark;
+  }
 }
 
 .light {
   background-color: $white;
   color: $dark;
   transition: all 400ms;
+
+  section {
+    color: $dark;
+  }
+
+  header {
+    background-color:$darkerWhite;
+  }
 }

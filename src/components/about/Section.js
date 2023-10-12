@@ -12,7 +12,7 @@ function Section(props) {
    return (
       <Box component={'section'} className={classNames(Style.section)}
            width={{xs: '80%', md: '50%'}}>
-         <Box sx={{backgroundColor: '#101010'}} p={'0.5rem'} borderRadius={'0.5rem 0.5rem 0.5rem 0.5rem'}
+         <Box component={'header'} p={'0.5rem'} borderRadius={'0.5rem 0.5rem 0.5rem 0.5rem'}
               fontSize={'1rem'} display={"flex"}>
             <i className={classNames(iconClass, Style.blue)}/>
             <Box className={classNames(Style.section, Style.title)} alignItems={'center'}>
